@@ -1,0 +1,61 @@
+
+body {
+  padding: 20px;
+  background: darkgray;
+}
+
+.normalContainer {
+  width: 650px;
+  padding: 50px;
+  background: #ddb88a;
+  position: relative;
+}
+
+.normalContainer, .canvasContainer, .operation {
+  float: left;
+}
+
+.operation button {
+  display: block;
+  margin: 20px;
+}
+
+.cell {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+}
+
+.piece {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.piece.activeBlack::after {
+  content: ' ';
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background: #000;
+  left: -10px;
+  top: -10px;
+  border-radius: 50%;
+}
+
+.piece.activeWhite::after {
+  content: ' ';
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background: #fff;
+  left: -10px;
+  top: -10px;
+  border-radius: 50%;
+}
+
